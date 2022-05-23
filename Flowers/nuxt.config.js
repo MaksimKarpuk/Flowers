@@ -13,25 +13,39 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     {
-      src:"~/assets/styles/index.scss",
-      lang:"sass"
-    }
+      src: '~/assets/styles/index.scss',
+      lang: 'sass',
+    },
   ],
   styleResources: {
     scss: [
-      "~/assets/styles/colors.scss"
+      '~/assets/styles/colors.scss',
+      '~/assets/styles/fonts.scss',
+      '~/assets/styles/null.scss',
     ],
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    "~/plugins/vue-lazyload.js"
-  ],
+  plugins: ['~/plugins/vue-lazyload.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

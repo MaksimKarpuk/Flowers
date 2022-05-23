@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
-@mixin H90 {
+// @mixin H ($fs,$lh) {
+//   font-family: 'Merriweather';
+//   font-style: normal;
+//   font-weight: 300;
+//   font-size: $fs;
+//   line-height: $lh;
+//   color: $N1200;
+// }
+
+@mixin H100() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 300;
@@ -9,15 +15,7 @@
   line-height: 28px;
   color: $N1200;
 }
-@mixin H100 {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
-  color: $N1200;
-}
-@mixin H200 {
+@mixin H200() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 300;
@@ -25,7 +23,7 @@
   line-height: 32px;
   color: $N1200;
 }
-@mixin H300 {
+@mixin H300() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
@@ -33,7 +31,7 @@
   line-height: 42px;
   color: $N1200;
 }
-@mixin H400 {
+@mixin H400() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
@@ -41,7 +39,7 @@
   line-height: 42px;
   color: $N1200;
 }
-@mixin H500 {
+@mixin H500() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
@@ -49,7 +47,7 @@
   line-height: 56px;
   color: $N1200;
 }
-@mixin H600 {
+@mixin H600() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
@@ -57,7 +55,7 @@
   line-height: 56px;
   color: $N1200;
 }
-@mixin H700 {
+@mixin H700() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
@@ -65,7 +63,7 @@
   line-height: 76px;
   color: $N1200;
 }
-@mixin H800 {
+@mixin H800() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
@@ -73,7 +71,7 @@
   line-height: 76px;
   color: $N1200;
 }
-@mixin H900 {
+@mixin H900() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
