@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@mixin H90 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: $N1200;
+}
+@mixin H100 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: $N1200;
+}
+@mixin H200 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  color: $N1200;
+}
+@mixin H300 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  color: $N1200;
+}
+@mixin H400 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 42px;
+  color: $N1200;
+}
+@mixin H500 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  color: $N1200;
+}
+@mixin H600 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: $N1200;
+}
+@mixin H700 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 68px;
+  line-height: 76px;
+  color: $N1200;
+}
+@mixin H800 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 76px;
+  color: $N1200;
+}
+@mixin H900 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: $N1200;
+}
