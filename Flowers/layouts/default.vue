@@ -1,10 +1,8 @@
 <template>
   <div :class="$style.main">
-    <div :class="$style.content">
-      <Header />
-      <Nuxt />
-      <Footer />
-    </div>
+    <Header />
+    <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -23,8 +21,5 @@ export default {
 .main {
   max-width: 90rem;
   margin: 0 auto;
-  .content {
-    max-width: 75rem;
-  }
 }
 </style>

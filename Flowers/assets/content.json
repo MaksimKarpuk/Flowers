@@ -1,0 +1,29 @@
+{
+  "pagesLinks": [
+    {
+      "id": 1,
+      "text": "Витрина",
+      "to": "/showcase"
+    },
+    {
+      "id": 2,
+      "text": "Конструктор",
+      "to": "/builder"
+    },
+    {
+      "id": 3,
+      "text": "О нас",
+      "to": "/about"
+    },
+    {
+      "id": 4,
+      "text": "Преимущества",
+      "to": "/advantages"
+    },
+    {
+      "id": 5,
+      "text": "Отзывы",
+      "to": "/feedback"
+    }
+  ]
+}

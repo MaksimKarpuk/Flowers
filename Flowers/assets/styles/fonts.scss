@@ -1,81 +1,72 @@
-// @mixin H ($fs,$lh) {
-//   font-family: 'Merriweather';
-//   font-style: normal;
-//   font-weight: 300;
-//   font-size: $fs;
-//   line-height: $lh;
-//   color: $N1200;
-// }
-
 @mixin H100() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
-  color: $N1200;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: $black;
 }
 @mixin H200() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 32px;
-  color: $N1200;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: $black;
 }
 @mixin H300() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
-  font-size: 34px;
-  line-height: 42px;
-  color: $N1200;
+  font-size: 2.125rem;
+  line-height: 2.625rem;
+  color: $black;
 }
 @mixin H400() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
-  font-size: 34px;
-  line-height: 42px;
-  color: $N1200;
+  font-size: 2.125rem;
+  line-height: 2.625rem;
+  color: $black;
 }
 @mixin H500() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
-  font-size: 48px;
-  line-height: 56px;
-  color: $N1200;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: $black;
 }
 @mixin H600() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  color: $N1200;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: $black;
 }
 @mixin H700() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
-  font-size: 68px;
-  line-height: 76px;
-  color: $N1200;
+  font-size: 4.25rem;
+  line-height: 4.75rem;
+  color: $black;
 }
 @mixin H800() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
-  font-size: 68px;
-  line-height: 76px;
-  color: $N1200;
+  font-size: 4.25rem;
+  line-height: 4.75rem;
+  color: $black;
 }
 @mixin H900() {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  color: $N1200;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: $black;
 }

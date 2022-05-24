@@ -15,16 +15,17 @@ export default {
     ],
     link: [
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap',
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preload',
+        as: 'style',
+        href: 'href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap',
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap',
+        href: 'href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap',
       },
     ],
   },
@@ -41,6 +42,8 @@ export default {
       '~/assets/styles/colors.scss',
       '~/assets/styles/fonts.scss',
       '~/assets/styles/null.scss',
+      '~/assets/styles/breakpoints.scss',
+      '~/assets/styles/grid.scss',
     ],
   },
 

@@ -1,5 +1,5 @@
 <template>
-  <a :class="$style.link">Link</a>
+  <NuxtLink to="/" :class="$style.link"> <slot/> </NuxtLink>
 </template>
 
 <script>
@@ -10,8 +10,11 @@ export default {
 
 <style lang="scss" module>
 .link {
-  @include H100();
   cursor: pointer;
+  color: $N100;
+}
+.link:hover {
+  color: $links;
 }
 
 </style>

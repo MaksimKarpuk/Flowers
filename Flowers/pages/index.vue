@@ -1,20 +1,8 @@
-<template>
-  <img :class="$style.image" v-lazy="'/img/header.png'" alt="" />
-</template>
+<template></template>
 
 <script>
-// import Button from '~/components/atoms/Button'
-// import Link from '~/components/atoms/Link'
-export default {
-  // components: {
-  //   Button,
-  //   Link,
-  // },
-}
+export default {}
 </script>
 
 <style lang="scss" module>
-.image {
-  width: 40rem;
-}
 </style>
