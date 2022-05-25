@@ -1,12 +1,13 @@
 <template>
-  <button :class="$style.button"> <slot/> </button>
+  <button :class="[$style.button, {[$style.small]:isSmall}]"><slot /></button>
 </template>
 
 <script>
 export default {
-    props: {
-      isOrange: Boolean,
-    }
+  props: {
+    isOrange: Boolean,
+    isSmall: Boolean,
+  },
 }
 </script>
 
@@ -19,8 +20,18 @@ export default {
   @include H200;
   color: $N100;
   cursor: pointer;
+  &:hover {
+    background: $button;
+  }
+  &.small {
+    padding: 0.5rem 1rem;
+    @include H100;
+    color: $N100;
+  }
 }
-.button:hover {
-  background: $button;
+@include bigTablet {
+  .button {
+    display: none;
+  }
 }
 </style>

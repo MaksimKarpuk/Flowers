@@ -16,5 +16,10 @@ export default {
 .link:hover {
   color: $links;
 }
+@include bigTablet {
+  .link {
+    display: none;
+  }
+}
 
 </style>

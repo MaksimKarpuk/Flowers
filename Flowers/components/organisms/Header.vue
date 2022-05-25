@@ -1,34 +1,67 @@
 <template>
   <header :class="$style.header">
-    <div :class="$style.logo"></div>
-    <nav :class="$style.links">
-      <Link v-for="link in links" :key="link.id" :to="link.to"> {{link.text}} <Link/>
-    </nav>
-    <Button :class="$style.button" />
+    <div :class="$style.container">
+      <Logo />
+      <nav :class="$style.links">
+        <Link v-for="link in links" :key="link.id" :to="link.to">
+          {{ link.text }}
+        </Link>
+      </nav>
+      <Button isSmall> Связаться </Button>
+      <Burger/>
+    </div>
   </header>
+  <!-- <section>
+    <div>
+      <img src="" alt="">
+    </div>
+    <div>
+      content
+    </div>
+  </section> -->
 </template>
 
 <script>
-import Button from '~components/atome/Button'
-import Link from '~components/atome/Link'
-import content from '~assets/content.json'
+import content from '~/assets/content.json'
+import Button from '~/components/atoms/Button'
+import Link from '~/components/atoms/Link'
+import Logo from '~/components/atoms/Logo'
+import Burger from '~/components/atoms/Burger'
 export default {
   components: {
     Button,
     Link,
+    Logo,
+    Burger
   },
   data() {
-    return { links: content.pagesLinks, }
+    return { links: content.pagesLinks }
   },
 }
 </script>
 
 <style lang="scss" module>
 .header {
-  height: 7.25rem;
   background: $header;
-  .button {
-    padding: 0.44rem 1.06rem;
+  .container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.25rem;
+    .links {
+      display: flex;
+      gap: 3.5rem;
+    }
+  }
+}
+@include custom(1150px) {
+  .header {
+    .container {
+      .links {
+        gap: 2rem;
+      }
+    }
   }
 }
 </style>
