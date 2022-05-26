@@ -1,7 +1,14 @@
-<template></template>
+<template>
+  <Banner />
+</template>
 
 <script>
-export default {}
+import Banner from '~/components/organisms/Banner'
+export default {
+  components: {
+    Banner,
+  },
+}
 </script>
 
 <style lang="scss" module>

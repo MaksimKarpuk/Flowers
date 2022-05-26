@@ -8,17 +8,9 @@
         </Link>
       </nav>
       <Button isSmall> Связаться </Button>
-      <Burger/>
+      <Burger />
     </div>
   </header>
-  <!-- <section>
-    <div>
-      <img src="" alt="">
-    </div>
-    <div>
-      content
-    </div>
-  </section> -->
 </template>
 
 <script>
@@ -32,7 +24,7 @@ export default {
     Button,
     Link,
     Logo,
-    Burger
+    Burger,
   },
   data() {
     return { links: content.pagesLinks }
