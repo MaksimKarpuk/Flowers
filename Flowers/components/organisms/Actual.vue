@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.actual">
     <div :class="$style.container">
-      <Title :title="'Актуальная витрина'" />
+      <Title :title="title" :icon="icon" />
       <Button> Посмотреть 3D-тур </Button>
       <Cards />
       <Button> Показать все </Button>
@@ -14,6 +14,12 @@ import Title from '~/components/molecules/Title'
 import Button from '~/components/atoms/Button'
 import Cards from '~/components/molecules/Cards'
 export default {
+  data() {
+    return { 
+      title: "Актуальная информация",
+      icon: "leterA"
+     }
+  },
   components: {
     Title,
     Button,

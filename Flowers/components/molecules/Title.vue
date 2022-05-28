@@ -1,11 +1,11 @@
 <template>
   <div :class="$style.container">
-    <div v-if="!isLeft" :class="$style.leftLine" ></div>
-    <div :class="$style.title">
+    <p v-if="!isLeft" :class="$style.leftLine" ></p>
+    <span :class="$style.title">
       {{ title }}
-      <Icon :icon="title[0]" :class="$style.icon" />
-    </div>
-    <div v-if="!isRight" :class="$style.rightLine" ></div>
+      <Icon :icon="icon" :class="$style.icon" />
+    </span>
+    <p v-if="!isRight" :class="$style.rightLine" ></p>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ components: {
     isLeft: Boolean,
     isRight: Boolean,
     isCenter: Boolean,
+    icon: String,
   },
 }
 </script>
