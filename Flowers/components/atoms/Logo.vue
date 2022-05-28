@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.logo">
-    <img v-lazy="'/img/logo.webp'" alt=" " />
+    <img v-lazy="'/img/header/logo.webp'" alt=" " />
   </div>
 </template>
  <style lang="scss" module>

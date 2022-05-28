@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import burger from '~/assets/icons/Menu.svg?inline'
+import burger from '~/assets/icons/menu.svg?inline'
 export default {
   components: {
     burger,
