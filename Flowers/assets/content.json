@@ -25,5 +25,13 @@
       "text": "Отзывы",
       "to": "/feedback"
     }
+  ],
+  "catalogCards": [
+    {
+      "id": 1,
+      "url": "/img/catalog/1.webp",
+      "price": "1000$",
+      "name": "RomaIIIka"
+    }
   ]
 }

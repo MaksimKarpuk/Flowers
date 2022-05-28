@@ -7,8 +7,8 @@
           {{ link.text }}
         </Link>
       </nav>
-      <Button isSmall> Связаться </Button>
-      <Burger />
+      <Button :class="$style.button" isSmall> Связаться </Button>
+      <Burger :class="$style.burger" />
     </div>
   </header>
 </template>
@@ -45,9 +45,30 @@ export default {
       display: flex;
       gap: 3.5rem;
     }
+    .burger {
+      display: none;
+    }
   }
 }
-@include custom(1150px) {
+@include custom(1250px) {
+  .header {
+    .container {
+      .links {
+        gap: 3rem;
+      }
+    }
+  }
+}
+@include custom(1220px) {
+  .header {
+    .container {
+      .links {
+        gap: 2.5rem;
+      }
+    }
+  }
+}
+@include custom(1190px) {
   .header {
     .container {
       .links {
@@ -56,6 +77,26 @@ export default {
     }
   }
 }
+@include custom(1110px) {
+  .header {
+    .container {
+      .links,
+      .button {
+        display: none;
+      }
+      .burger {
+        display: block;
+      }
+    }
+  }
+}
+@include mobile {
+  .burger {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
 </style>
 
 

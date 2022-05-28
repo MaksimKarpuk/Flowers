@@ -1,3 +1,17 @@
+@mixin H80() {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+@mixin H90() {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
 @mixin H100() {
   font-family: 'Merriweather';
   font-style: normal;

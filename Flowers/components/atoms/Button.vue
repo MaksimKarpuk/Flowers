@@ -1,5 +1,12 @@
 <template>
-  <button :class="[$style.button, {[$style.small]:isSmall}]"><slot /></button>
+  <button
+    :class="[
+      $style.button,
+      { [$style.small]: isSmall, [$style.orange]: isOrange },
+    ]"
+  >
+    <slot />
+  </button>
 </template>
 
 <script>
@@ -28,10 +35,9 @@ export default {
     @include H100;
     color: $N100;
   }
-}
-@include bigTablet {
-  .button {
-    display: none;
+  &.orange {
+    background: $button;
+    border: none;
   }
 }
 </style>
