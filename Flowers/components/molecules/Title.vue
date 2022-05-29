@@ -1,20 +1,20 @@
 <template>
   <div :class="$style.container">
-    <p v-if="!isLeft" :class="$style.leftLine" ></p>
-    <span :class="$style.title">
+    <p v-if="!isLeft" :class="$style.leftLine"></p>
+    <div :class="$style.title">
       {{ title }}
       <Icon :icon="icon" :class="$style.icon" />
-    </span>
-    <p v-if="!isRight" :class="$style.rightLine" ></p>
+    </div>
+    <p v-if="!isRight" :class="$style.rightLine"></p>
   </div>
 </template>
 
 <script>
 import Icon from '~/components/atoms/Icon'
 export default {
-components: {
-    Icon
-},
+  components: {
+    Icon,
+  },
   props: {
     title: String,
     isLeft: Boolean,
@@ -26,23 +26,61 @@ components: {
 </script>
 
 <style lang="scss" module>
-.container{
-  .leftLine .rightLine{
-      height: 0.0625rem;
-      width: 100%;
-      color: $N100;
-  }
-  .title{
-      @include H600;
-      color: $N100;
-      position: relative;
-      .icon{
-          position: absolute;
-          left: 0;
-          bottom: 0;
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  @include custom(700px) {
+      & {
+       display: block;
       }
+    }
+  .rightLine {
+    height: 0.0625rem;
+    width: 100%;
+    background-color: $N100;
   }
-
-
+  .title {
+    @include H600;
+    color: $N100;
+    position: relative;
+    white-space: nowrap;
+    @include bigTablet {
+      & {
+        @include H400;
+      }
+    }
+    @include custom(700px) {
+      & {
+       margin: 0 0 0.5rem 0;
+      }
+    }
+    @include custom(530px) {
+      & {
+       @include H80;
+      }
+    }
+    @include custom(425px) {
+      & {
+       @include H900;
+      }
+    }
+    @include custom(380px) {
+      & {
+       @include H200;
+      }
+    }
+    @include custom(360px) {
+      & {
+       @include H100;
+       font-weight: 700;
+      }
+    }
+    .icon {
+      position: absolute;
+      left: -0.3rem;
+      bottom: 0rem;
+    }
+  }
 }
 </style>

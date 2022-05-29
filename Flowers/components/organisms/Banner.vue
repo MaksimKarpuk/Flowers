@@ -96,7 +96,7 @@ export default {
       @include mobile {
         & .button1 {
           @include H100;
-          padding: 0.75rem 2.75rem;
+          padding: 1rem 2.75rem;
         }
         & .button2 {
           @include H100;
