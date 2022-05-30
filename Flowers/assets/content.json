@@ -1,0 +1,67 @@
+{
+  "pagesLinks": [
+    {
+      "id": 1,
+      "text": "Витрина",
+      "to": "/showcase"
+    },
+    {
+      "id": 2,
+      "text": "Конструктор",
+      "to": "/builder"
+    },
+    {
+      "id": 3,
+      "text": "О нас",
+      "to": "/about"
+    },
+    {
+      "id": 4,
+      "text": "Преимущества",
+      "to": "/advantages"
+    },
+    {
+      "id": 5,
+      "text": "Отзывы",
+      "to": "/feedback"
+    }
+  ],
+  "catalogCards": [
+    {
+      "id": 1,
+      "url": "/img/catalog/1.webp",
+      "price": "160 BYN",
+      "name": "Букет «Tiffany»"
+    },
+    {
+      "id": 2,
+      "url": "/img/catalog/2.webp",
+      "price": "135 BYN",
+      "name": "Букет «Crimson»"
+    },
+    {
+      "id": 3,
+      "url": "/img/catalog/3.webp",
+      "price": "115 BYN",
+      "name": "Букет «Assol»"
+    },
+    {
+      "id": 4,
+      "url": "/img/catalog/4.webp",
+      "price": "145 BYN",
+      "name": "Букет «Bridget»"
+    },
+    {
+      "id": 5,
+      "url": "/img/catalog/5.webp",
+      "price": "160 BYN",
+      "name": "Букет «Juliet»"
+    },
+    {
+      "id": 6,
+      "url": "/img/catalog/6.webp",
+      "price": "55 BYN",
+      "name": "Букет «Lovely»"
+    }
+  ]
+}
