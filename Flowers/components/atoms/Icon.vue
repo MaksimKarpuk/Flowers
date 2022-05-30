@@ -18,8 +18,8 @@ export default {
   },
   props: {
     icon: {
-        type:String,
-        default: ""
+      type: String,
+      default: '',
     },
   },
 }

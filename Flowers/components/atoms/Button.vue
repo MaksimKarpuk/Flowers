@@ -12,8 +12,14 @@
 <script>
 export default {
   props: {
-    isOrange: Boolean,
-    isSmall: Boolean,
+    isOrange: {
+      type: Boolean,
+      default: false,
+    },
+    isSmall: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -37,7 +43,11 @@ export default {
   }
   &.orange {
     background: $button;
-    border: none;
+    border: 0.0625rem solid transparent;
+    &:hover {
+      background: none;
+      border: 0.0625rem solid $N100;
+    }
   }
 }
 </style>

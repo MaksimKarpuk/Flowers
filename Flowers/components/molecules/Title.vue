@@ -16,11 +16,26 @@ export default {
     Icon,
   },
   props: {
-    title: String,
-    isLeft: Boolean,
-    isRight: Boolean,
-    isCenter: Boolean,
-    icon: String,
+    title: {
+      type: String,
+      default: '',
+    },
+    isLeft: {
+      type: Boolean,
+      default: false,
+    },
+    isRight: {
+      type: Boolean,
+      default: false,
+    },
+    isCenter: {
+      type: Boolean,
+      default: false,
+    },
+    icon: {
+      type: String,
+      default: '',
+    },
   },
 }
 </script>
@@ -31,10 +46,8 @@ export default {
   align-items: center;
   gap: 1rem;
   @include custom(700px) {
-      & {
-       display: block;
-      }
-    }
+    display: block;
+  }
   .rightLine {
     height: 0.0625rem;
     width: 100%;
@@ -46,35 +59,23 @@ export default {
     position: relative;
     white-space: nowrap;
     @include bigTablet {
-      & {
-        @include H400;
-      }
+      @include H400;
     }
     @include custom(700px) {
-      & {
-       margin: 0 0 0.5rem 0;
-      }
+      margin: 0 0 0.5rem 0;
     }
     @include custom(530px) {
-      & {
-       @include H80;
-      }
+      @include H80;
     }
     @include custom(425px) {
-      & {
-       @include H900;
-      }
+      @include H900;
     }
     @include custom(380px) {
-      & {
-       @include H200;
-      }
+      @include H200;
     }
     @include custom(360px) {
-      & {
-       @include H100;
-       font-weight: 700;
-      }
+      @include H100;
+      font-weight: 700;
     }
     .icon {
       position: absolute;

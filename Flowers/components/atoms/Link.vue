@@ -1,25 +1,20 @@
 <template>
-  <NuxtLink to="/" :class="$style.link"> <slot/> </NuxtLink>
+  <NuxtLink to="/" :class="$style.link"> <slot /> </NuxtLink>
 </template>
 
 <script>
-export default {
-    
-}
+export default {}
 </script>
 
 <style lang="scss" module>
 .link {
   cursor: pointer;
   color: $N100;
-}
-.link:hover {
-  color: $links;
-}
-@include bigTablet {
-  .link {
+  &:hover {
+    color: $links;
+  }
+  @include bigTablet {
     display: none;
   }
 }
-
 </style>

@@ -44,42 +44,24 @@ export default {
     .links {
       display: flex;
       gap: 3.5rem;
-    }
-    .burger {
-      display: none;
-    }
-  }
-}
-@include custom(1250px) {
-  .header {
-    .container {
-      .links {
+      @include custom(1250px) {
         gap: 3rem;
       }
-    }
-  }
-}
-@include custom(1220px) {
-  .header {
-    .container {
-      .links {
+      @include custom(1220px) {
         gap: 2.5rem;
       }
-    }
-  }
-}
-@include custom(1190px) {
-  .header {
-    .container {
-      .links {
+      @include custom(1190px) {
         gap: 2rem;
       }
     }
-  }
-}
-@include custom(1110px) {
-  .header {
-    .container {
+    .burger {
+      display: none;
+      @include mobile {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    @include custom(1110px) {
       .links,
       .button {
         display: none;
@@ -90,13 +72,6 @@ export default {
     }
   }
 }
-@include mobile {
-  .burger {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
-
 </style>
 
 

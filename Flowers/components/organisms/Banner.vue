@@ -46,21 +46,15 @@ export default {
       color: $N200;
       margin: 0 0 1.5rem 0;
       @include bigTablet {
-        & {
-          @include H300;
-        }
+        @include H300;
       }
       @include tablet {
-        & {
-          @include H200;
-          margin: 0 0 1rem 0;
-        }
+        @include H200;
+        margin: 0 0 1rem 0;
       }
       @include mobile {
-        & {
-          @include H90;
-          margin: 0 0 0.5rem 0;
-        }
+        @include H90;
+        margin: 0 0 0.5rem 0;
       }
     }
     .title {
@@ -68,47 +62,37 @@ export default {
       color: $N200;
       margin: 0 0 4rem 0;
       @include bigTablet {
-        & {
-          @include H600;
-        }
+        @include H600;
       }
       @include tablet {
-        & {
-          @include H500;
-          margin: 0 0 2.5rem 0;
-        }
+        @include H500;
+        margin: 0 0 2.5rem 0;
       }
       @include custom(525px) {
-        & {
-          @include H400;
-        }
+        @include H400;
       }
       @include mobile {
-        & {
-          @include H80;
-          margin: 0 0 1.5rem 0;
-        }
+        @include H80;
+        margin: 0 0 1.5rem 0;
       }
     }
     .button {
       display: flex;
       gap: 1.5rem;
       @include mobile {
-        & .button1 {
+        .button1 {
           @include H100;
           padding: 1rem 2.75rem;
         }
-        & .button2 {
+        .button2 {
           @include H100;
           padding: 1rem 3rem;
         }
       }
       @include custom(815px) {
-        & {
-          display: block;
-          text-align: center;
-        }
-        & .button1 {
+        display: block;
+        text-align: center;
+        .button1 {
           margin: 0 0 1.2rem 0;
         }
       }
