@@ -33,6 +33,7 @@ export default {
   @include H200;
   color: $N100;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background: $button;
   }

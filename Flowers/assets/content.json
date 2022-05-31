@@ -63,5 +63,43 @@
       "price": "55 BYN",
       "name": "Букет «Lovely»"
     }
+  ],
+  "catalogInsta": [
+    {
+      "id": 1,
+      "url": "/img/insta/1.webp"
+    },
+    {
+      "id": 2,
+      "url": "/img/insta/2.webp"
+    },
+    {
+      "id": 3,
+      "url": "/img/insta/3.webp"
+    },
+    {
+      "id": 4,
+      "url": "/img/insta/4.webp"
+    },
+    {
+      "id": 5,
+      "url": "/img/insta/5.webp"
+    },
+    {
+      "id": 6,
+      "url": "/img/insta/6.webp"
+    },
+    {
+      "id": 7,
+      "url": "/img/insta/7.webp"
+    },
+    {
+      "id": 8,
+      "url": "/img/insta/8.webp"
+    },
+    {
+      "id": 9,
+      "url": "/img/insta/9.webp"
+    }
   ]
 }

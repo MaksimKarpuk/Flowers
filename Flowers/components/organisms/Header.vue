@@ -61,7 +61,7 @@ export default {
         height: 2.5rem;
       }
     }
-    @include custom(1110px) {
+    @include custom(1024px) {
       .links,
       .button {
         display: none;
