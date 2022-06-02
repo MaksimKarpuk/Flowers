@@ -39,7 +39,7 @@ export default {
     }
     @include mobile {
       padding-top: 12.75rem;
-      padding-bottom: 2rem;
+      padding-bottom: 11rem;
     }
     .subtitle {
       @include H300;

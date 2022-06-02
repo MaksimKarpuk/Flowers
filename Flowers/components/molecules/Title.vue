@@ -3,7 +3,9 @@
     <p v-if="!isLeft" :class="$style.leftLine"></p>
     <div :class="$style.title">
       {{ title }}
-      <Icon :icon="icon" :class="$style.icon" />
+      <div :class="$style.icon">
+        <Icon :icon="icon" />
+      </div>
     </div>
     <p v-if="!isRight" :class="$style.rightLine"></p>
   </div>
@@ -71,16 +73,21 @@ export default {
       @include H900;
     }
     @include custom(380px) {
-      @include H200;
-    }
-    @include custom(360px) {
       @include H100;
       font-weight: 700;
     }
     .icon {
       position: absolute;
-      left: -0.3rem;
-      bottom: 0rem;
+      left: -0.2rem;
+      bottom: -0.7rem;
+      @include bigTablet {
+        left: -0.5rem;
+        bottom: -0.7rem;
+      }
+      @include custom(425px) {
+        left: -0.7rem;
+        bottom: -0.7rem;
+      }
     }
   }
 }
