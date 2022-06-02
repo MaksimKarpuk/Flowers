@@ -1,10 +1,10 @@
 <template>
-  <div :class="$style.instagramm">
+  <section :class="$style.instagramm">
     <div :class="$style.container">
       <div :class="$style.text">
-        <div :class="$style.title">
+        <h2 :class="$style.title">
           Будьте в курсе наших новинок, скидок и акций
-        </div>
+        </h2>
         <div :class="$style.subtitle">Подписывайтесь на нас в Инстаграм</div>
       </div>
       <div :class="$style.insta">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
