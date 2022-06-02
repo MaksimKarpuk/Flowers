@@ -3,7 +3,7 @@
     <p v-if="!isLeft" :class="$style.leftLine"></p>
     <div :class="$style.title">
       {{ title }}
-      <div :class="$style.icon">
+      <div :class="[$style.icon, { [$style.letterK]: isLetterK }]">
         <Icon :icon="icon" />
       </div>
     </div>
@@ -80,6 +80,11 @@ export default {
       position: absolute;
       left: -0.2rem;
       bottom: -0.7rem;
+      &.letterK {
+        position: absolute;
+        left: 0rem;
+        bottom: -1rem;
+      }
       @include bigTablet {
         left: -0.5rem;
         bottom: -0.7rem;
