@@ -1,13 +1,7 @@
 <template>
   <div :class="$style.info">
     <div :class="$style.container">
-      <Title
-        :title="title"
-        :icon="icon"
-        isLeft
-        isLetterK
-        :class="$style.title"
-      />
+      <Title :title="title" :icon="icon" isLeft :class="$style.title" />
       <div :class="$style.content">
         <div :class="$style.contacts">
           <div :class="$style.phone">
