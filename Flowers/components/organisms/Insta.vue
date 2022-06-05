@@ -110,7 +110,7 @@ export default {
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin: 0 0 3.5rem 0;
+        margin: 0 0 3.5rem 1.5rem;
         @include tablet {
           margin: 0 0 2rem 0;
         }

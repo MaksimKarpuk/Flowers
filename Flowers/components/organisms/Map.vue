@@ -79,17 +79,27 @@ export default {
 <style lang="scss" module>
 .info {
   padding: 0 0 10rem 0;
+  margin: -0.1rem 0 0 0;
   background: $header;
   .container {
     @include container;
-    padding-top: 12.5rem;
+    padding-top: 10rem;
+    @include tablet {
+      padding-top: 7rem;
+    }
     .title {
       margin: 0 0 5rem 0;
     }
     .content {
       display: flex;
       justify-content: space-between;
+      @include custom(730px) {
+        display: block;
+      }
       .contacts {
+        @include custom(730px) {
+          margin: 0 0 2rem 0;
+        }
         .phone {
           display: flex;
           gap: 1rem;
@@ -105,6 +115,9 @@ export default {
           .link {
             color: $N100;
             @include H100;
+            @include tablet {
+              @include H90;
+            }
           }
         }
         .post {
@@ -122,6 +135,9 @@ export default {
           .link {
             color: $N100;
             @include H100;
+            @include tablet {
+              @include H90;
+            }
           }
         }
         .time {
@@ -139,12 +155,27 @@ export default {
           .timeText {
             color: $N100;
             @include H100;
+            @include tablet {
+              @include H90;
+            }
           }
         }
         .adres {
           display: flex;
           gap: 1rem;
           margin: 0 0 9.875rem 0;
+          @include custom(1152px) {
+            margin: 0 0 8.1rem 0;
+          }
+          @include custom(882px) {
+            margin: 0 0 7rem 0;
+          }
+          @include tablet {
+            margin: 0 0 2.8rem 0;
+          }
+          @include custom(730px) {
+            margin: 0 0 1.5rem 0;
+          }
           .image {
             width: 2.1rem;
             height: 2.1rem;
@@ -156,12 +187,18 @@ export default {
           .adresText {
             color: $N100;
             @include H100;
+            @include tablet {
+              @include H90;
+            }
           }
         }
         .text {
           .link {
             color: $N100;
             @include H100;
+            @include tablet {
+              @include H90;
+            }
           }
         }
       }
@@ -169,6 +206,26 @@ export default {
     .map {
       width: 39.9rem;
       height: 27.3rem;
+      @include tablet {
+        width: 27rem;
+        height: 21.7rem;
+      }
+      @include custom(730px) {
+        height: 27.3rem;
+        margin: 0 auto;
+      }
+      @include mobile {
+        width: 24rem;
+        height: 24rem;
+      }
+      @include custom(420px) {
+        width: 20rem;
+        height: 20rem;
+      }
+      @include custom(360px) {
+        width: 18rem;
+        height: 18rem;
+      }
       iframe {
         width: 100%;
         height: 100%;

@@ -42,6 +42,9 @@ export default {
   margin: -0.5rem 0 0 0;
   padding: 0 0 10rem 0;
   background: $header;
+  @include tablet {
+    padding: 0 0 7rem 0;
+  }
   .container {
     @include container;
     padding-top: 5rem;
