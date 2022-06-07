@@ -2,7 +2,7 @@
   <button
     :class="[
       $style.button,
-      { [$style.small]: isSmall, [$style.orange]: isOrange },
+      { [$style.small]: isSmall, [$style.aside]: isAside, [$style.orange]: isOrange },
     ]"
   >
     <slot />
@@ -17,6 +17,10 @@ export default {
       default: false,
     },
     isSmall: {
+      type: Boolean,
+      default: false,
+    },
+    isAside: {
       type: Boolean,
       default: false,
     },
@@ -40,6 +44,11 @@ export default {
   &.small {
     padding: 0.5rem 1rem;
     @include H100;
+    color: $N100;
+  }
+  &.aside {
+    padding: 0.75rem 2rem;
+    @include H200;
     color: $N100;
   }
   &.orange {

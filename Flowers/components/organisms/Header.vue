@@ -8,7 +8,7 @@
         </Link>
       </nav>
       <Button :class="$style.button" isSmall> Связаться </Button>
-      <Burger :class="$style.burger" />
+      <Burger :class="$style.burger" @click="$store.commit('aside/openAside')" />
     </div>
   </header>
 </template>

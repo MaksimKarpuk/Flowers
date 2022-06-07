@@ -8,15 +8,17 @@
             <div :class="$style.image">
               <img v-lazy="'/img/info/phone.webp'" alt=" " />
             </div>
-            <a href="tel:+375 (29) 805-34-79" :class="$style.link"
-              >+375 (29) 805-34-79</a
+            <Link href="tel:+375 (29) 805-34-79" :class="$style.link"
+              >+375 (29) 805-34-79</Link
             >
           </div>
           <div :class="$style.post">
             <div :class="$style.image">
               <img v-lazy="'/img/info/post.webp'" alt=" " />
             </div>
-            <a a href="mailto:pfl_@tut.by" :class="$style.link">pfl_@tut.by</a>
+            <Link href="mailto:pfl_@tut.by" :class="$style.link"
+              >pfl_@tut.by</Link
+            >
           </div>
           <div :class="$style.time">
             <div :class="$style.image">
@@ -32,7 +34,12 @@
             <div :class="$style.image">
               <img v-lazy="'/img/info/adres.webp'" alt=" " />
             </div>
-            <div :class="$style.adresText">г. Брест, проспект Машерова, 67</div>
+            <Link
+              href="https://www.google.com/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF.+%D0%9C%D0%B0%D1%88%D0%B5%D1%80%D0%BE%D0%B2%D0%B0+67,+%D0%91%D1%80%D0%B5%D1%81%D1%82/@52.088945,23.711327,17z/data=!3m1!4b1!4m5!3m4!1s0x47210c08eae70d75:0x56be0c654bab015!8m2!3d52.088945!4d23.711327"
+              target="_blank"
+              :class="$style.adresText"
+              >г. Брест, проспект Машерова, 67</Link
+            >
           </div>
           <div :class="$style.text">
             <div :class="$style.link">
@@ -40,15 +47,8 @@
             </div>
           </div>
         </div>
-        <div :class="$style.map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.493572443943!2d23.70913831522571!3d52.08894827583727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210c08eae70d75%3A0x56be0c654bab015!2z0L_RgNC-0YHQvy4g0JzQsNGI0LXRgNC-0LLQsCA2Nywg0JHRgNC10YHRgg!5e0!3m2!1sru!2sby!4v1654191354244!5m2!1sru!2sby"
-            max-width="639"
-            height="438"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div>
+          <MapAtom />
         </div>
       </div>
     </div>
@@ -57,6 +57,8 @@
 
 <script>
 import Title from '~/components/molecules/Title'
+import MapAtom from '~/components/atoms/MapAtom'
+import Link from '~/components/atoms/Link'
 export default {
   data() {
     return {
@@ -66,7 +68,10 @@ export default {
   },
   components: {
     Title,
+    MapAtom,
+    Link,
   },
+  Link,
 }
 </script>
 
@@ -98,14 +103,7 @@ export default {
           display: flex;
           gap: 1rem;
           margin: 0 0 1.5rem 0;
-          .image {
-            width: 2.1rem;
-            height: 2.1rem;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
+          align-items: center;
           .link {
             color: $N100;
             @include H100;
@@ -118,14 +116,8 @@ export default {
           display: flex;
           gap: 1rem;
           margin: 0 0 1.5rem 0;
-          .image {
-            width: 2.1rem;
-            height: 2.1rem;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
+          align-items: center;
+
           .link {
             color: $N100;
             @include H100;
@@ -138,14 +130,6 @@ export default {
           display: flex;
           gap: 1rem;
           margin: 0 0 1rem 0;
-          .image {
-            width: 2.1rem;
-            height: 2.1rem;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
           .timeText {
             color: $N100;
             @include H100;
@@ -158,6 +142,7 @@ export default {
           display: flex;
           gap: 1rem;
           margin: 0 0 9.875rem 0;
+          align-items: center;
           @include custom(1152px) {
             margin: 0 0 8.1rem 0;
           }
@@ -169,14 +154,6 @@ export default {
           }
           @include custom(730px) {
             margin: 0 0 1.5rem 0;
-          }
-          .image {
-            width: 2.1rem;
-            height: 2.1rem;
-            img {
-              width: 100%;
-              height: 100%;
-            }
           }
           .adresText {
             color: $N100;
@@ -197,33 +174,13 @@ export default {
         }
       }
     }
-    .map {
-      width: 39.9rem;
-      height: 27.3rem;
-      @include tablet {
-        width: 27rem;
-        height: 21.7rem;
-      }
-      @include custom(730px) {
-        height: 27.3rem;
-        margin: 0 auto;
-      }
-      @include mobile {
-        width: 24rem;
-        height: 24rem;
-      }
-      @include custom(420px) {
-        width: 20rem;
-        height: 20rem;
-      }
-      @include custom(360px) {
-        width: 18rem;
-        height: 18rem;
-      }
-      iframe {
-        width: 100%;
-        height: 100%;
-      }
+  }
+  .image {
+    width: 2.1rem;
+    height: 2.1rem;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
