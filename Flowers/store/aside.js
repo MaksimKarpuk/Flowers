@@ -3,7 +3,6 @@ export const state = () => ({
 })
 export const mutations = {
   openAside(state) {
-    state.isOpen !== state.isOpen;
-    console.log(state.isOpen)
+    state.isOpen = !state.isOpen;
   },
 }

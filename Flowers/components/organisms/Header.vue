@@ -8,7 +8,10 @@
         </Link>
       </nav>
       <Button :class="$style.button" isSmall> Связаться </Button>
-      <Burger :class="$style.burger" @click="$store.commit('aside/openAside')" />
+      <Burger
+        :class="$style.burger"
+        @click="$store.commit('aside/openAside'),scroll"
+      />
     </div>
   </header>
 </template>
@@ -18,7 +21,7 @@ import content from '~/assets/content.json'
 import Button from '~/components/atoms/Button'
 import Link from '~/components/atoms/Link'
 import Logo from '~/components/atoms/Logo'
-import Burger from '~/components/atoms/Burger'
+import Burger from '~/assets/icons/menu.svg?inline'
 export default {
   components: {
     Button,
@@ -28,6 +31,11 @@ export default {
   },
   data() {
     return { links: content.pagesLinks }
+  },
+   methods: {
+    scroll() {
+      document.body.classList.toggle('.scroll')
+    },
   },
 }
 </script>

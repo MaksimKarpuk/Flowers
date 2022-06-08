@@ -92,6 +92,7 @@ export default {
     .content {
       display: flex;
       justify-content: space-between;
+      gap: 1rem;
       @include custom(730px) {
         display: block;
       }
