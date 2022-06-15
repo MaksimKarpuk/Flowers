@@ -93,11 +93,11 @@ export default {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-      @include custom(730px) {
+      @include custom(791px) {
         display: block;
       }
       .contacts {
-        @include custom(730px) {
+        @include custom(791px) {
           margin: 0 0 2rem 0;
         }
         .phone {
@@ -144,11 +144,23 @@ export default {
           gap: 1rem;
           margin: 0 0 9.875rem 0;
           align-items: center;
-          @include custom(1152px) {
+          @include custom(1168px) {
             margin: 0 0 8.1rem 0;
           }
+          @include custom(1054px) {
+            margin: 0 0 6rem 0;
+          }
+          @include custom(944px) {
+            margin: 0 0 3.8rem 0;
+          }
           @include custom(882px) {
-            margin: 0 0 7rem 0;
+            margin: 0 0 4rem 0;
+          }
+          @include custom(855px) {
+            margin: 0 0 3rem 0;
+          }
+          @include custom(823px) {
+            margin: 0 0 2rem 0;
           }
           @include tablet {
             margin: 0 0 2.8rem 0;

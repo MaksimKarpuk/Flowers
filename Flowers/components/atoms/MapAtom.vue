@@ -13,15 +13,36 @@
 
 <style lang="scss" module>
 .map {
-  width: 39.9rem;
-  height: 27.3rem;
-  @include tablet {
-    width: 27rem;
-    height: 21.7rem;
+  width: 40rem;
+  height: 27rem;
+  @include custom(1054px) {
+    width: 36rem;
+    height: 25rem;
   }
-  @include custom(730px) {
+  @include bigTablet {
+    width: 32rem;
+    height: 24rem;
+  }
+  @include custom(855px) {
+    width: 30rem;
+    height: 23rem;
+  }
+  @include custom(823px) {
+    width: 28rem;
+    height: 22rem;
+  }
+  @include custom(791px) {
+    width: 36rem;
     height: 27.3rem;
     margin: 0 auto;
+  }
+  @include custom(625px) {
+    width: 32rem;
+    height: 25rem;
+  }
+  @include custom(555px) {
+    width: 26rem;
+    height: 24rem;
   }
   @include mobile {
     width: 24rem;
