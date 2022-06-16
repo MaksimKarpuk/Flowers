@@ -1,18 +1,18 @@
 <template>
   <aside
     :class="[$style.aside, { [$style.active]: isOpen }]"
-    @click="$store.commit('aside/openAside')"
+    @click="$store.commit('aside/closeAside'), scroll()"
   >
     <div :class="$style.right" @click.stop>
-      <div @click="$store.commit('aside/openAside'),scroll">
+      <div @click="$store.commit('aside/closeAside'), scroll()">
         <Arrow :class="$style.arrow" />
       </div>
-      <nav :class="$style.links" @click="$store.commit('aside/openAside')">
+      <nav :class="$style.links" @click="$store.commit('aside/closeAside'), scroll()">
         <Link v-for="link in links" :key="link.id" :to="link.to">
           {{ link.text }}
         </Link>
       </nav>
-      <div @click="$store.commit('aside/openAside')">
+      <div @click="$store.commit('aside/closeAside'), scroll()">
         <Button :class="$style.button" isAside> Связаться </Button>
       </div>
     </div>
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     scroll() {
-      document.body.classList.toggle('.scroll')
+      document.body.classList.toggle('scroll')
     },
   },
   computed: {
@@ -48,11 +48,10 @@ export default {
 
 <style lang="scss" module>
 .aside {
-  width: 0rem;
+  width: 0;
   height: 100vh;
   transition: all 0.3s ease-in-out;
-
-  background: rgba(255, 255, 255, 0.5);
+  background: $aside;
   backdrop-filter: blur(0.5rem);
   position: fixed;
   top: 0;

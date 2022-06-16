@@ -10,7 +10,7 @@
       <Button :class="$style.button" isSmall> Связаться </Button>
       <Burger
         :class="$style.burger"
-        @click="$store.commit('aside/openAside'),scroll"
+        @click="$store.commit('aside/openAside'),scroll()"
       />
     </div>
   </header>
@@ -34,7 +34,7 @@ export default {
   },
    methods: {
     scroll() {
-      document.body.classList.toggle('.scroll')
+      document.body.classList.toggle('scroll')
     },
   },
 }
