@@ -10,7 +10,7 @@
       <Button :class="$style.button" isSmall> Связаться </Button>
       <Burger
         :class="$style.burger"
-        @click="$store.commit('aside/openAside'),scroll()"
+        @click="$store.commit('aside/toggleAside'),scroll()"
       />
     </div>
   </header>

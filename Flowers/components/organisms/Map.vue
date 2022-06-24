@@ -8,7 +8,7 @@
             <div :class="$style.image">
               <img v-lazy="'/img/info/phone.webp'" alt=" " />
             </div>
-            <Link href="tel:+375 (29) 805-34-79" :class="$style.link"
+            <Link :href="'tel:+375 (29) 805-34-79'" :class="$style.link"
               >+375 (29) 805-34-79</Link
             >
           </div>
@@ -16,7 +16,7 @@
             <div :class="$style.image">
               <img v-lazy="'/img/info/post.webp'" alt=" " />
             </div>
-            <Link href="mailto:pfl_@tut.by" :class="$style.link"
+            <Link :href="'mailto:pfl_@tut.by'" :class="$style.link"
               >pfl_@tut.by</Link
             >
           </div>
@@ -35,8 +35,8 @@
               <img v-lazy="'/img/info/adres.webp'" alt=" " />
             </div>
             <Link
-              href="https://www.google.com/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF.+%D0%9C%D0%B0%D1%88%D0%B5%D1%80%D0%BE%D0%B2%D0%B0+67,+%D0%91%D1%80%D0%B5%D1%81%D1%82/@52.088945,23.711327,17z/data=!3m1!4b1!4m5!3m4!1s0x47210c08eae70d75:0x56be0c654bab015!8m2!3d52.088945!4d23.711327"
-              target="_blank"
+              :href="'https://www.google.com/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF.+%D0%9C%D0%B0%D1%88%D0%B5%D1%80%D0%BE%D0%B2%D0%B0+67,+%D0%91%D1%80%D0%B5%D1%81%D1%82/@52.088945,23.711327,17z/data=!3m1!4b1!4m5!3m4!1s0x47210c08eae70d75:0x56be0c654bab015!8m2!3d52.088945!4d23.711327'"
+              :target="'blank'"
               :class="$style.adresText"
               >г. Брест, проспект Машерова, 67</Link
             >
