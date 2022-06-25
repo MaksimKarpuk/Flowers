@@ -10,6 +10,7 @@
           :class="$style.input"
           :placeholder="placeholder"
           :type="type"
+          :text="text"
         />
         <Arrow :class="$style.button" />
       </div>
@@ -34,6 +35,7 @@ export default {
     return {
       placeholder: 'Введите свой e-mail',
       type: 'text',
+      text: "",
     }
   },
 }

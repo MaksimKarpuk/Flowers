@@ -1,12 +1,13 @@
 <template>
   <div :class="$style.input">
-    <form action=" ">
-      <input :type="type" :placeholder="placeholder" />
+    <form action=" " @submit.prevent="$store.commit('telegram/addEmail')">
+      <input :type="type" :placeholder="placeholder" v-model="text" />
     </form>
   </div>
 </template>
 
 <script>
+// import { mapMutations } from 'vuex'
 export default {
   props: {
     placeholder: {
@@ -17,7 +18,20 @@ export default {
       type: String,
       default: '',
     },
+    text: {
+      type: String,
+      default: '',
+    },
   },
+  // methods: {
+  //   ...mapMutations(['addEmail']),
+  //   submit() {
+  //     this.text === ''
+  //       ? document.body.className = "error"
+  //       : this.addEmail(this.text)
+  //     this.text = ''
+  //   },
+  // },
 }
 </script>
 
@@ -43,7 +57,7 @@ input {
   @include mobile {
     width: 18rem;
   }
-   @include custom(400px) {
+  @include custom(400px) {
     width: 13rem;
   }
 }
