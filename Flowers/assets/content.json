@@ -101,5 +101,11 @@
       "id": 9,
       "url": "/img/insta/9.webp"
     }
+  ],
+  "feedBackPhoto": [
+    {
+      "id": 1,
+      "url": "/img/feedback/1.webp"
+    }
   ]
 }
