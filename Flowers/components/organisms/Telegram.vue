@@ -6,13 +6,7 @@
       </div>
       <div :class="$style.subtitle">Подписаться на рассылку</div>
       <div :class="$style.form">
-        <InputText
-          :class="$style.input"
-          :placeholder="placeholder"
-          :type="type"
-          :text="text"
-        />
-        <Arrow :class="$style.button" />
+        <EmailForm :class="$style.input" />
       </div>
     </div>
     <div :class="$style.image">
@@ -22,21 +16,12 @@
 </template>
 
 <script>
-import InputText from '~/components/atoms/InputText'
-import Arrow from '~/assets/icons/TelegramArrow.svg?inline'
+import EmailForm from '~/components/organisms/EmailForm'
 import Form from '~/assets/icons/Form.svg?inline'
 export default {
   components: {
-    InputText,
-    Arrow,
+    EmailForm,
     Form,
-  },
-  data() {
-    return {
-      placeholder: 'Введите свой e-mail',
-      type: 'text',
-      text: "",
-    }
   },
 }
 </script>
@@ -100,7 +85,7 @@ export default {
       @include custom(920px) {
         margin: 0 0 2.5rem 0;
       }
-       @include mobile {
+      @include mobile {
         @include H100;
         margin: 0 0 2rem 0;
       }
@@ -114,10 +99,7 @@ export default {
       .input {
         align-self: flex-end;
       }
-      .button {
-        color: $header;
-        cursor: pointer;
-      }
+
       @include custom(1130px) {
         margin: 0 0 7rem 0;
       }
