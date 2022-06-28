@@ -13,9 +13,9 @@
             <img v-lazy="'/img/insta/logo.webp'" alt=" " />
           </div>
           <div :class="$style.textLogo">
-            <a href="https://www.instagram.com/" target="_blank">
+            <Link href="https://www.instagram.com/" target="_blank">
               planetofflowers
-            </a>
+            </Link>
           </div>
         </div>
         <div :class="$style.photos">
@@ -28,6 +28,7 @@
 
 <script>
 import InstaCard from '~/components/atoms/InstaCard'
+import Link from '~/components/atoms/Link'
 import content from '~/assets/content.json'
 export default {
   data() {
@@ -37,6 +38,7 @@ export default {
   },
   components: {
     InstaCard,
+    Link,
   },
 }
 </script>
@@ -110,7 +112,7 @@ export default {
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin: 0 0 3.5rem 0;
+        margin: 0 0 3.5rem 1.5rem;
         @include tablet {
           margin: 0 0 2rem 0;
         }

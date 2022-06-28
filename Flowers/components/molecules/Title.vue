@@ -79,7 +79,7 @@ export default {
     .icon {
       position: absolute;
       left: -0.2rem;
-      bottom: -0.7rem;
+      bottom: -0.5rem;
       @include bigTablet {
         left: -0.5rem;
         bottom: -0.7rem;

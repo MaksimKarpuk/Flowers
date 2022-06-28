@@ -1,6 +1,6 @@
 <template>
   <NuxtLink v-if="to" :to="to" :class="$style.link"> <slot /> </NuxtLink>
-  <a v-else-if="href" :href="href"> <slot/> </a>
+  <a v-else-if="href" :href="href" :target="`_${target}`"> <slot /> </a>
 </template>
 
 <script>
@@ -13,6 +13,10 @@ export default {
     href: {
       type: String,
       default: '',
+    },
+    target: {
+      type: String,
+      default: 'self',
     },
   },
 }
