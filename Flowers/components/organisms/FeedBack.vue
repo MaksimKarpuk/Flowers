@@ -6,14 +6,18 @@
         <div :class="$style.left">
           <ArrowLeft :class="$style.arrowLeft" />
         </div>
-        <FeedBackCard
-          v-for="card in cards"
-          :key="card.id"
-          :url="card.url"
-          :fullName="card.fullName"
-          :text="card.text"
-          :id="card.id"
-        />
+        <client-only>
+          <VueSlickCarousel v-bind="carouselOptions">
+            <FeedBackCard
+              v-for="card in cards"
+              :key="card.id"
+              :url="card.url"
+              :fullName="card.fullName"
+              :text="card.text"
+              :id="card.id"
+            />
+          </VueSlickCarousel>
+        </client-only>
         <div :class="$style.right">
           <ArrowRight :class="$style.arrowRight" />
         </div>
@@ -24,6 +28,8 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import Title from '~/components/molecules/Title'
 import FeedBackCard from '~/components/molecules/FeedBackCard'
 import ArrowLeft from '~/assets/icons/ArrowLeft.svg?inline'
@@ -42,6 +48,53 @@ export default {
     ArrowLeft,
     ArrowRight,
     FeedBackCard,
+    VueSlickCarousel,
+  },
+  computed: {
+    carouselOptions() {
+      return {
+        lazyLoad: 'progressive',
+        arrows: false,
+        infinite: false,
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        variableWidth: false,
+        // dots: true,
+        // dotsClass: 'slick-dots',
+        // responsive: [
+        //   {
+        //     breakpoint: 1440,
+        //     settings: {
+        //       slidesToShow: 1.4,
+        //     },
+        //   },
+        //   {
+        //     breakpoint: 1028,
+        //     settings: {
+        //       slidesToShow: 1.4,
+        //     },
+        //   },
+        //   {
+        //     breakpoint: 850,
+        //     settings: {
+        //       slidesToShow: 1.2,
+        //     },
+        //   },
+        //   {
+        //     breakpoint: 768,
+        //     settings: {
+        //       slidesToShow: 1,
+        //     },
+        //   },
+        //   {
+        //     breakpoint: 500,
+        //     settings: {
+        //       slidesToShow: 1,
+        //     },
+        //   },
+        // ],
+      }
+    },
   },
 }
 </script>
@@ -59,7 +112,7 @@ export default {
       margin: 3.5rem 0 5rem 0;
       display: flex;
       justify-content: space-between;
-      
+
       .left {
         max-width: 3.6rem;
         width: 100%;

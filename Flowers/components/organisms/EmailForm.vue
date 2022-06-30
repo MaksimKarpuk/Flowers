@@ -26,13 +26,18 @@ export default {
     Arrow,
   },
   methods: {
-    submit() {
-      if (this.value) {
-        this.$store.commit('telegram/addEmail',this.value)
-        this.value = ''
-      } else {
-        this.isError = true
-        this.placeholder = 'Вы не ввели ваш Elail адрес'
+    async submit() {
+      // if (this.value) {
+      //   this.$store.commit('telegram/addEmail',this.value)
+      //   this.value = ''
+      // } else {
+      //   this.isError = true
+      //   this.placeholder = 'Вы не ввели ваш Elail адрес'
+      // }
+      try {
+        await this.$axios.$post('/api/telegram')
+      } catch (error) {
+        console.log('error')
       }
     },
   },
