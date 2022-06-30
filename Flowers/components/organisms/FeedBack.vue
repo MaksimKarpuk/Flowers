@@ -6,7 +6,14 @@
         <div :class="$style.left">
           <ArrowLeft :class="$style.arrowLeft" />
         </div>
-        <FeedBackCard v-for="card in cards" :key="card.id" :url="card.url" />
+        <FeedBackCard
+          v-for="card in cards"
+          :key="card.id"
+          :url="card.url"
+          :fullName="card.fullName"
+          :text="card.text"
+          :id="card.id"
+        />
         <div :class="$style.right">
           <ArrowRight :class="$style.arrowRight" />
         </div>
@@ -51,7 +58,8 @@ export default {
     .content {
       margin: 3.5rem 0 5rem 0;
       display: flex;
-      gap: 3.5rem;
+      justify-content: space-between;
+      
       .left {
         max-width: 3.6rem;
         width: 100%;

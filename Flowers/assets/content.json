@@ -105,7 +105,21 @@
   "feedBackPhoto": [
     {
       "id": 1,
-      "url": "/img/feedback/1.webp"
+      "url": "/img/feedback/1.webp",
+      "fullName": "Наталья Пинчук, Брест",
+      "text": "dfgkjsdfgnsk dfjgnskejngskdjfgskejrthgksejrb gvksejgbrdfvsdfhbdfgb xdfvsfvgadgsdfgsd."
+    },
+    {
+      "id": 2,
+      "url": "/img/feedback/2.webp",
+      "fullName": "Андрей Новик, Брест",
+      "text": "Все было очень хорошо!"
+    },
+    {
+      "id": 3,
+      "url": "/img/feedback/3.webp",
+      "fullName": "Максим Карпук, Брест",
+      "text": "Очень понравилось!"
     }
   ]
 }
