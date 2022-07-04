@@ -3,27 +3,27 @@
     {
       "id": 1,
       "text": "Витрина",
-      "to": "/showcase"
+      "isSmooth": "#showcase"
     },
     {
       "id": 2,
       "text": "Конструктор",
-      "to": "/builder"
+      "isSmooth": "#builder"
     },
     {
       "id": 3,
       "text": "О нас",
-      "to": "/about"
+      "isSmooth": "#about"
     },
     {
       "id": 4,
       "text": "Преимущества",
-      "to": "/advantages"
+      "isSmooth": "#advantages"
     },
     {
       "id": 5,
       "text": "Отзывы",
-      "to": "/feedback"
+      "isSmooth": "#feedback"
     }
   ],
   "catalogCards": [

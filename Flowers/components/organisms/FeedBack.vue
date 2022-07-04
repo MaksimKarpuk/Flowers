@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.feedBack">
+  <div :class="$style.feedBack" id="feedback">
     <div :class="$style.container">
       <Title :title="title" :icon="icon" isCenter :class="$style.title" />
       <div :class="$style.content">

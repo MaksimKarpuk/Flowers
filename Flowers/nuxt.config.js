@@ -25,7 +25,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: "https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap",
+        href: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap',
       },
     ],
   },
@@ -48,7 +48,8 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vue-lazyload.js'],
+  plugins: ['~/plugins/vue-lazyload.js',
+   '~/plugins/vue2-smooth-scroll.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -72,11 +73,9 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    proxy: true
+    proxy: true,
   },
-  serverMiddleware: [
-    { path: '/api', handler: '~/server-middleware/index.js' },
-  ],
+  serverMiddleware: [{ path: '/api', handler: '~/server-middleware/index.js' }],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
