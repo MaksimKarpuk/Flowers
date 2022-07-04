@@ -3,27 +3,27 @@
     {
       "id": 1,
       "text": "Витрина",
-      "isSmooth": "#showcase"
+      "href": "#showcase"
     },
     {
       "id": 2,
       "text": "Конструктор",
-      "isSmooth": "#builder"
+      "href": "#builder"
     },
     {
       "id": 3,
       "text": "О нас",
-      "isSmooth": "#about"
+      "href": "#about"
     },
     {
       "id": 4,
       "text": "Преимущества",
-      "isSmooth": "#advantages"
+      "href": "#advantages"
     },
     {
       "id": 5,
       "text": "Отзывы",
-      "isSmooth": "#feedback"
+      "href": "#feedback"
     }
   ],
   "catalogCards": [
@@ -120,6 +120,58 @@
       "url": "/img/feedback/3.webp",
       "fullName": "Максим Карпук, Брест",
       "text": "Очень понравилось!"
+    }
+  ],
+  "footerBuyers":[
+    {
+      "id": 1,
+      "text": "Витрина",
+      "href": "#showcase"
+    },
+    {
+      "id": 2,
+      "text": "Конструктор",
+      "href": "#designer"
+    }
+  ],
+  "footerServis":[
+    {
+      "id": 1,
+      "text": "О нас",
+      "href": "#about"
+    },
+    {
+      "id": 2,
+      "text": "Преимущества",
+      "href": "#advantages"
+    },
+    {
+      "id": 3,
+      "text": "Отзывы",
+      "href": "#feedback"
+    },
+    {
+      "id": 4,
+      "text": "Контакты",
+      "href": "#contacts"
+    }
+  ],
+  "socialNet": [
+    {
+      "id": 1,
+      "url":  "/img/footer/Facebook.webp"
+    },
+    {
+      "id": 2,
+      "url": "/img/footer/Instagram.webp"
+    },
+    {
+      "id": 3,
+      "url": "/img/footer/Viber.webp"
+    },
+    {
+      "id": 4,
+      "url": "/img/footer/VK.webp"
     }
   ]
 }

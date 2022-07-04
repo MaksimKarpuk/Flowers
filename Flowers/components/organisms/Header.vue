@@ -3,7 +3,7 @@
     <div :class="$style.container">
       <Logo />
       <nav :class="$style.links">
-        <Link v-for="link in links" :key="link.id"  :isSmooth="false" :to="isSmooth">
+        <Link v-for="link in links" :key="link.id"  isSmooth :href="link.href">
           {{ link.text }}
         </Link>
       </nav>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.feedBack" id="feedback">
+  <div id="feedback" :class="$style.feedBack">
     <div :class="$style.container">
       <Title :title="title" :icon="icon" isCenter :class="$style.title" />
       <div :class="$style.content">
@@ -13,8 +13,8 @@
               :key="card.id"
               :url="card.url"
               :fullName="card.fullName"
-              :text="card.text"
               :id="card.id"
+              :text="card.text"
             />
           </VueSlickCarousel>
         </client-only>
@@ -36,19 +36,19 @@ import ArrowLeft from '~/assets/icons/ArrowLeft.svg?inline'
 import ArrowRight from '~/assets/icons/ArrowRight.svg?inline'
 import content from '~/assets/content.json'
 export default {
-  data() {
-    return {
-      title: 'Отзывы',
-      icon: 'letterO',
-      cards: content.feedBackPhoto,
-    }
-  },
   components: {
     Title,
     ArrowLeft,
     ArrowRight,
     FeedBackCard,
     VueSlickCarousel,
+  },
+  data() {
+    return {
+      title: 'Отзывы',
+      icon: 'letterO',
+      cards: content.feedBackPhoto,
+    }
   },
   computed: {
     carouselOptions() {
@@ -59,40 +59,40 @@ export default {
         slidesToScroll: 1,
         slidesToShow: 2,
         variableWidth: false,
-        // dots: true,
-        // dotsClass: 'slick-dots',
-        // responsive: [
-        //   {
-        //     breakpoint: 1440,
-        //     settings: {
-        //       slidesToShow: 1.4,
-        //     },
-        //   },
-        //   {
-        //     breakpoint: 1028,
-        //     settings: {
-        //       slidesToShow: 1.4,
-        //     },
-        //   },
-        //   {
-        //     breakpoint: 850,
-        //     settings: {
-        //       slidesToShow: 1.2,
-        //     },
-        //   },
-        //   {
-        //     breakpoint: 768,
-        //     settings: {
-        //       slidesToShow: 1,
-        //     },
-        //   },
-        //   {
-        //     breakpoint: 500,
-        //     settings: {
-        //       slidesToShow: 1,
-        //     },
-        //   },
-        // ],
+        dots: true,
+        dotsClass: 'slick-dots',
+        responsive: [
+          {
+            breakpoint: 1440,
+            settings: {
+              slidesToShow: 1.4,
+            },
+          },
+          {
+            breakpoint: 1028,
+            settings: {
+              slidesToShow: 1.4,
+            },
+          },
+          {
+            breakpoint: 850,
+            settings: {
+              slidesToShow: 1.2,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       }
     },
   },
@@ -110,9 +110,6 @@ export default {
     }
     .content {
       margin: 3.5rem 0 5rem 0;
-      display: flex;
-      justify-content: space-between;
-
       .left {
         max-width: 3.6rem;
         width: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.content" v-if="id === 1">
+  <div :class="$style.content" >
     <div :class="$style.border">
       <img v-lazy="url" alt=" " :class="$style.image" />
     </div>

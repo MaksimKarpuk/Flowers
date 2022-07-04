@@ -6,8 +6,7 @@ dotenv.config({ path: 'env/.env' })
 const app = express()
 app.use(bodyParser.json({ limit: '10mb' }))
 app.post('/telegram', async (req, res) => {
-  let message = 'Hello world'
-  console.log(process.env.TG_TOKEN+" "+process.env.TG_CHAT)
+  let message = encodeURI (req.body.value)
   try {
     await axios.post(
       `https://api.telegram.org/bot${process.env.TG_TOKEN}` +

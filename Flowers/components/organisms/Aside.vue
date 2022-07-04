@@ -4,11 +4,15 @@
     @click="$store.commit('aside/toggleAside'), scroll()"
   >
     <div :class="$style.right" @click.stop>
-      <div @click="$store.commit('aside/toggleAside'), scroll()">
+      <div @click="$store.commit('aside/toggleAside'), scroll()" :class="$style.header">
+        <div><Logo /></div>
         <Arrow :class="$style.arrow" />
       </div>
-      <nav :class="$style.links" @click="$store.commit('aside/toggleAside'), scroll()">
-        <Link v-for="link in links" :key="link.id" :to="link.to">
+      <nav
+        :class="$style.links"
+        @click="$store.commit('aside/toggleAside'), scroll()"
+      >
+        <Link v-for="link in links" :key="link.id" isSmooth :href="link.href">
           {{ link.text }}
         </Link>
       </nav>
@@ -24,11 +28,13 @@ import content from '~/assets/content.json'
 import Link from '~/components/atoms/Link'
 import Button from '~/components/atoms/Button'
 import Arrow from '~/assets/icons/Arrow.svg?inline'
+import Logo from '~/components/atoms/Logo'
 export default {
   components: {
     Link,
     Button,
     Arrow,
+    Logo,
   },
   data() {
     return { links: content.pagesLinks }
@@ -68,9 +74,12 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-  }
-  .arrow {
-    margin: 1.5rem 0 4rem 16rem;
+    .header{
+      display: flex;
+      gap: 4rem;
+      margin: 2rem 1rem 5rem 2.7rem;
+      
+    }
   }
   .links {
     display: flex;
