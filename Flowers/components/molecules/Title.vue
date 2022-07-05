@@ -50,7 +50,7 @@ export default {
   @include custom(700px) {
     display: block;
   }
-  .rightLine {
+  .rightLine, .leftLine {
     height: 0.0625rem;
     width: 100%;
     background-color: $N100;

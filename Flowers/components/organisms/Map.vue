@@ -82,7 +82,7 @@ export default {
   background: $header;
   .container {
     @include container;
-    padding-top: 10rem;
+    padding-top: 7rem;
     @include tablet {
       padding-top: 7rem;
     }

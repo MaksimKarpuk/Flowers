@@ -48,8 +48,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vue-lazyload.js',
-   '~/plugins/vue2-smooth-scroll.js'],
+  plugins: ['~/plugins/vue-lazyload.js', '~/plugins/vue2-smooth-scroll.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

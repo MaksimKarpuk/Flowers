@@ -34,12 +34,14 @@
           </div>
         </nav>
         <div :class="$style.socials">
-          <SocialNet
+          <Link
             v-for="social in socialNet"
             :key="social.id"
-            :url="social.url"
+            :href="social.href"
             :class="$style.social"
-          />
+          >
+            <img v-lazy="social.url" alt=" " :class="$style.image" />
+          </Link>
         </div>
       </div>
     </div>
@@ -55,13 +57,11 @@
 <script>
 import Logo from '~/components/atoms/Logo'
 import Link from '~/components/atoms/Link'
-import SocialNet from '~/components/atoms/SocialNet'
 import content from '~/assets/content.json'
 export default {
   components: {
     Logo,
     Link,
-    SocialNet,
   },
   data() {
     return {
@@ -83,6 +83,7 @@ export default {
     justify-content: space-between;
     padding: 6rem 0 5rem 0;
     border-bottom: 0.0625rem solid $N100;
+    gap: 7rem;
     .links {
       display: flex;
       gap: 7rem;
@@ -104,11 +105,19 @@ export default {
       .socials {
         display: flex;
         gap: 1.5rem;
+        height: 2.8rem;
+        .social {
+          .image {
+            width: 2.8rem;
+            height: 2.8rem;
+          }
+        }
       }
     }
   }
   .text {
     @include H90;
+    @include container;
     color: $N100;
     text-align: center;
     padding: 3rem 0 6rem 0;

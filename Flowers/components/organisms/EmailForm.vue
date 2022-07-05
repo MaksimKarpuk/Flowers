@@ -17,7 +17,7 @@ import Arrow from '~/assets/icons/TelegramArrow.svg?inline'
 export default {
   data() {
     return {
-      placeholder: 'Введите ваш Email',
+      placeholder: 'Введите сообщение',
       isError: false,
       value: '',
     }
@@ -36,7 +36,7 @@ export default {
         this.value = ''
       } else {
         this.isError = true
-        this.placeholder = 'Вы не ввели ваш Email адрес'
+        this.placeholder = 'Вы не ввели сообщение'
       }
     },
   },

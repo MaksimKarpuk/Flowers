@@ -23,13 +23,13 @@ export default {
       type: String,
       default: '',
     },
-    href: {
-      type: String,
-      default: '',
-    },
     target: {
       type: String,
       default: 'self',
+    },
+    href: {
+      type: String,
+      default: '',
     },
   },
 }

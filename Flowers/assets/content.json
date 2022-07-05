@@ -107,22 +107,10 @@
       "id": 1,
       "url": "/img/feedback/1.webp",
       "fullName": "Наталья Пинчук, Брест",
-      "text": "dfgkjsdfgnsk dfjgnskejngskdjfgskejrthgksejrb gvksejgbrdfvsdfhbdfgb xdfvsfvgadgsdfgsd."
-    },
-    {
-      "id": 2,
-      "url": "/img/feedback/2.webp",
-      "fullName": "Андрей Новик, Брест",
-      "text": "Все было очень хорошо!"
-    },
-    {
-      "id": 3,
-      "url": "/img/feedback/3.webp",
-      "fullName": "Максим Карпук, Брест",
-      "text": "Очень понравилось!"
+      "text": "Очень рекомендую всем. Мой заказ был принят и обработан максимально быстро. Качество букета просто поражает. Есть доставка. 10 из 10"
     }
   ],
-  "footerBuyers":[
+  "footerBuyers": [
     {
       "id": 1,
       "text": "Витрина",
@@ -134,7 +122,7 @@
       "href": "#designer"
     }
   ],
-  "footerServis":[
+  "footerServis": [
     {
       "id": 1,
       "text": "О нас",
@@ -159,19 +147,23 @@
   "socialNet": [
     {
       "id": 1,
-      "url":  "/img/footer/Facebook.webp"
+      "url": "/img/footer/facebook.webp",
+      "href": "https://www.facebook.com"
     },
     {
       "id": 2,
-      "url": "/img/footer/Instagram.webp"
+      "url": "/img/footer/instagram.webp",
+      "href": "https://www.instagram.com"
     },
     {
       "id": 3,
-      "url": "/img/footer/Viber.webp"
+      "url": "/img/footer/viber.webp",
+      "href": "https://www.viber.com"
     },
     {
       "id": 4,
-      "url": "/img/footer/VK.webp"
+      "url": "/img/footer/vk.webp",
+      "href": "https://www.vk.com"
     }
   ]
 }

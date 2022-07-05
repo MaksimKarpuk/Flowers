@@ -1,13 +1,13 @@
 <template>
   <div id="feedback" :class="$style.feedBack">
     <div :class="$style.container">
-      <Title :title="title" :icon="icon" isCenter :class="$style.title" />
+      <Title :title="title" :icon="icon" :class="$style.title" />
       <div :class="$style.content">
         <div :class="$style.left">
           <ArrowLeft :class="$style.arrowLeft" />
         </div>
-        <client-only>
-          <VueSlickCarousel v-bind="carouselOptions">
+        <!-- <client-only>
+          <VueSlickCarousel v-bind="carouselOptions"> -->
             <FeedBackCard
               v-for="card in cards"
               :key="card.id"
@@ -16,8 +16,8 @@
               :id="card.id"
               :text="card.text"
             />
-          </VueSlickCarousel>
-        </client-only>
+          <!-- </VueSlickCarousel>
+        </client-only> -->
         <div :class="$style.right">
           <ArrowRight :class="$style.arrowRight" />
         </div>
@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+// import VueSlickCarousel from 'vue-slick-carousel'
+// import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import Title from '~/components/molecules/Title'
 import FeedBackCard from '~/components/molecules/FeedBackCard'
 import ArrowLeft from '~/assets/icons/ArrowLeft.svg?inline'
@@ -41,7 +41,7 @@ export default {
     ArrowLeft,
     ArrowRight,
     FeedBackCard,
-    VueSlickCarousel,
+    // VueSlickCarousel,
   },
   data() {
     return {
@@ -109,6 +109,8 @@ export default {
       margin: 0 0 4rem 0;
     }
     .content {
+      display: flex;
+      justify-content: space-between;
       margin: 3.5rem 0 5rem 0;
       .left {
         max-width: 3.6rem;
