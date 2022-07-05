@@ -17,7 +17,7 @@ import Arrow from '~/assets/icons/TelegramArrow.svg?inline'
 export default {
   data() {
     return {
-      placeholder: 'Введите ваш Email',
+      placeholder: 'Введите сообщение',
       isError: false,
       value: '',
     }
@@ -26,13 +26,17 @@ export default {
     Arrow,
   },
   methods: {
-    submit() {
+    async submit() {
       if (this.value) {
-        this.$store.commit('telegram/addEmail',this.value)
+        try {
+          await this.$axios.$post('/api/telegram', {value: this.value})
+        } catch (error) {
+          console.log('error')
+        }
         this.value = ''
       } else {
         this.isError = true
-        this.placeholder = 'Вы не ввели ваш Elail адрес'
+        this.placeholder = 'Вы не ввели сообщение'
       }
     },
   },

@@ -1,12 +1,23 @@
 <template>
-  <div :class="$style.feedBack">
+  <div id="feedback" :class="$style.feedBack">
     <div :class="$style.container">
-      <Title :title="title" :icon="icon" isCenter :class="$style.title" />
+      <Title :title="title" :icon="icon" :class="$style.title" />
       <div :class="$style.content">
         <div :class="$style.left">
           <ArrowLeft :class="$style.arrowLeft" />
         </div>
-        <FeedBackCard v-for="card in cards" :key="card.id" :url="card.url" />
+        <!-- <client-only>
+          <VueSlickCarousel v-bind="carouselOptions"> -->
+            <FeedBackCard
+              v-for="card in cards"
+              :key="card.id"
+              :url="card.url"
+              :fullName="card.fullName"
+              :id="card.id"
+              :text="card.text"
+            />
+          <!-- </VueSlickCarousel>
+        </client-only> -->
         <div :class="$style.right">
           <ArrowRight :class="$style.arrowRight" />
         </div>
@@ -17,12 +28,21 @@
 </template>
 
 <script>
+// import VueSlickCarousel from 'vue-slick-carousel'
+// import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import Title from '~/components/molecules/Title'
 import FeedBackCard from '~/components/molecules/FeedBackCard'
 import ArrowLeft from '~/assets/icons/ArrowLeft.svg?inline'
 import ArrowRight from '~/assets/icons/ArrowRight.svg?inline'
 import content from '~/assets/content.json'
 export default {
+  components: {
+    Title,
+    ArrowLeft,
+    ArrowRight,
+    FeedBackCard,
+    // VueSlickCarousel,
+  },
   data() {
     return {
       title: 'Отзывы',
@@ -30,11 +50,51 @@ export default {
       cards: content.feedBackPhoto,
     }
   },
-  components: {
-    Title,
-    ArrowLeft,
-    ArrowRight,
-    FeedBackCard,
+  computed: {
+    carouselOptions() {
+      return {
+        lazyLoad: 'progressive',
+        arrows: false,
+        infinite: false,
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        variableWidth: false,
+        dots: true,
+        dotsClass: 'slick-dots',
+        responsive: [
+          {
+            breakpoint: 1440,
+            settings: {
+              slidesToShow: 1.4,
+            },
+          },
+          {
+            breakpoint: 1028,
+            settings: {
+              slidesToShow: 1.4,
+            },
+          },
+          {
+            breakpoint: 850,
+            settings: {
+              slidesToShow: 1.2,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      }
+    },
   },
 }
 </script>
@@ -49,9 +109,9 @@ export default {
       margin: 0 0 4rem 0;
     }
     .content {
-      margin: 3.5rem 0 5rem 0;
       display: flex;
-      gap: 3.5rem;
+      justify-content: space-between;
+      margin: 3.5rem 0 5rem 0;
       .left {
         max-width: 3.6rem;
         width: 100%;

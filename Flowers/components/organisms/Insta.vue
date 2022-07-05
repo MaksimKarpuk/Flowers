@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.instagramm">
+  <div id="about" :class="$style.instagramm">
     <div :class="$style.container">
       <div :class="$style.text">
         <div :class="$style.title">
@@ -31,14 +31,14 @@ import InstaCard from '~/components/atoms/InstaCard'
 import Link from '~/components/atoms/Link'
 import content from '~/assets/content.json'
 export default {
+  components: {
+    InstaCard,
+    Link,
+  },
   data() {
     return {
       cards: content.catalogInsta,
     }
-  },
-  components: {
-    InstaCard,
-    Link,
   },
 }
 </script>

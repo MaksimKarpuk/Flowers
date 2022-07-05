@@ -3,27 +3,27 @@
     {
       "id": 1,
       "text": "Витрина",
-      "to": "/showcase"
+      "href": "#showcase"
     },
     {
       "id": 2,
       "text": "Конструктор",
-      "to": "/builder"
+      "href": "#builder"
     },
     {
       "id": 3,
       "text": "О нас",
-      "to": "/about"
+      "href": "#about"
     },
     {
       "id": 4,
       "text": "Преимущества",
-      "to": "/advantages"
+      "href": "#advantages"
     },
     {
       "id": 5,
       "text": "Отзывы",
-      "to": "/feedback"
+      "href": "#feedback"
     }
   ],
   "catalogCards": [
@@ -105,7 +105,65 @@
   "feedBackPhoto": [
     {
       "id": 1,
-      "url": "/img/feedback/1.webp"
+      "url": "/img/feedback/1.webp",
+      "fullName": "Наталья Пинчук, Брест",
+      "text": "Очень рекомендую всем. Мой заказ был принят и обработан максимально быстро. Качество букета просто поражает. Есть доставка. 10 из 10"
+    }
+  ],
+  "footerBuyers": [
+    {
+      "id": 1,
+      "text": "Витрина",
+      "href": "#showcase"
+    },
+    {
+      "id": 2,
+      "text": "Конструктор",
+      "href": "#designer"
+    }
+  ],
+  "footerServis": [
+    {
+      "id": 1,
+      "text": "О нас",
+      "href": "#about"
+    },
+    {
+      "id": 2,
+      "text": "Преимущества",
+      "href": "#advantages"
+    },
+    {
+      "id": 3,
+      "text": "Отзывы",
+      "href": "#feedback"
+    },
+    {
+      "id": 4,
+      "text": "Контакты",
+      "href": "#contacts"
+    }
+  ],
+  "socialNet": [
+    {
+      "id": 1,
+      "url": "/img/footer/facebook.webp",
+      "href": "https://www.facebook.com"
+    },
+    {
+      "id": 2,
+      "url": "/img/footer/instagram.webp",
+      "href": "https://www.instagram.com"
+    },
+    {
+      "id": 3,
+      "url": "/img/footer/viber.webp",
+      "href": "https://www.viber.com"
+    },
+    {
+      "id": 4,
+      "url": "/img/footer/vk.webp",
+      "href": "https://www.vk.com"
     }
   ]
 }

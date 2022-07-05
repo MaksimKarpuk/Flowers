@@ -1,22 +1,35 @@
 <template>
   <NuxtLink v-if="to" :to="to" :class="$style.link"> <slot /> </NuxtLink>
-  <a v-else-if="href" :href="href" :target="`_${target}`"> <slot /> </a>
+  <a
+    v-else-if="isSmooth"
+    v-smooth-scroll="{ offset: -64 }"
+    :href="href"
+    :class="$style.link"
+    ><slot
+  /></a>
+  <a v-else :href="href" :target="`_${target}`" :class="$style.link">
+    <slot />
+  </a>
 </template>
 
 <script>
 export default {
   props: {
-    to: {
-      type: String,
-      default: '',
+    isSmooth: {
+      type: Boolean,
+      default: true,
     },
-    href: {
+    to: {
       type: String,
       default: '',
     },
     target: {
       type: String,
       default: 'self',
+    },
+    href: {
+      type: String,
+      default: '',
     },
   },
 }

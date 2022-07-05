@@ -1,16 +1,11 @@
 <template>
-  <div :class="$style.content">
+  <div :class="$style.content" >
     <div :class="$style.border">
       <img v-lazy="url" alt=" " :class="$style.image" />
     </div>
     <div :class="$style.info">
-      <div :class="$style.title">Наталья Пинчук, Брест</div>
-      <div :class="$style.text">
-        Один из лучших цветочных салонов. Всегда свежие цветы, интересные живые
-        растения в кадках и горшках, большой выбор сувенирной продукции и
-        сопутствующих товаров. Красивый интерьер, профессиональные флористы,
-        хорошее обслуживание.
-      </div>
+      <div :class="$style.title">{{ fullName }}</div>
+      <div :class="$style.text">{{ text }}</div>
     </div>
   </div>
 </template>
@@ -18,7 +13,19 @@
 <script>
 export default {
   props: {
+    id: {
+      type: Number,
+      default: 1,
+    },
     url: {
+      type: String,
+      default: '',
+    },
+    fullName: {
+      type: String,
+      default: '',
+    },
+    text: {
       type: String,
       default: '',
     },
@@ -29,7 +36,7 @@ export default {
 <style lang="scss" module>
 .content {
   display: flex;
-  gap: 8rem;
+  gap: 7rem;
   .border {
     border: 0.0625rem solid $N100;
     width: 24.3rem;
@@ -41,15 +48,16 @@ export default {
       margin: 1.5rem 0 0 2rem;
     }
   }
-  .info{
+  .info {
     color: $N100;
     align-self: center;
-    .title{
-        @include H200;
-        margin: 0 0 1rem 0;
+    max-width: 25rem;
+    .title {
+      @include H200;
+      margin: 0 0 1rem 0;
     }
-    .text{
-        @include H100;
+    .text {
+      @include H100; 
     }
   }
 }
